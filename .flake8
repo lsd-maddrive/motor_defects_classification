@@ -1,0 +1,9 @@
+[flake8]
+ignore=
+    ; print found
+    T001,
+    ; missing docstring in public function
+    D103,
+    ; missing docstring in public module
+    D100
+max-line-length = 100
