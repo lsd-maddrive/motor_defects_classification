@@ -1,0 +1,9 @@
+__pycache__/
+
+# virtual environments
+.venv
+
+# Hydra logs
+outputs/
+
+train_checkpoints/

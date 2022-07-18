@@ -1,0 +1,2 @@
+_target_: motor_defects_classification.models.stanford_resnet.StanfordResNet
+num_classes: 6

@@ -26,32 +26,12 @@ repos:
       - id: detect-private-key
       - id: check-case-conflict
 
-  - repo: local
-    hooks:
-      - id: black
-        name: black
-        entry: poetry run black --config pyproject.toml
-        types: [python]
-        language: system
-
   - repo: https://github.com/asottile/pyupgrade
     rev: v2.31.0
     hooks:
       - id: pyupgrade
         args:
           - --py37-plus
-
-  - repo: https://github.com/humitos/mirrors-autoflake
-    rev: v1.3
-    hooks:
-      - id: autoflake
-        args:
-          [
-            "--in-place",
-            "--remove-all-unused-imports",
-            "--remove-unused-variable",
-            "--remove-duplicate-keys",
-          ]
 
   - repo: https://gitlab.com/pycqa/flake8
     rev: 3.9.2

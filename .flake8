@@ -2,8 +2,15 @@
 ignore=
     ; print found
     T001,
+    ; missing docstring in public module
+    D100,
+    ; missing docstring in public method
+    D102,
     ; missing docstring in public function
     D103,
     ; missing docstring in public module
-    D100
+    D104,
+    ; missing docstring in __init__
+    D107,
+
 max-line-length = 100

@@ -1,0 +1,42 @@
+project_name: Motor Defects Classification
+
+enable_clearml: False
+verbose: True
+
+seed: 42
+num_epochs: 100
+lr: 1.0e-3
+
+# All cores
+num_workers: -1
+batch_size: 8
+
+class_labels: [
+  "no defect",
+  "bearing ball defect",
+  "bearing outer ring defect",
+  "bearing inner ring defect",
+  "intercoil defect",
+  "rotor defect",
+  "static eccentricity"
+]
+
+optimizer:
+  _target_: torch.optim.Adam
+  lr: ${lr}
+
+scheduler:
+  _target_: torch.optim.lr_scheduler.ReduceLROnPlateau
+  # Must be tuned based on samples count
+  patience: 7
+  # cooldown: 5
+  factor: 0.2
+  min_lr: 1.0e-6
+  verbose: True
+
+criterion:
+  _target_: torch.nn.CrossEntropyLoss
+
+defaults:
+  - model: stanford
+  - _self_
