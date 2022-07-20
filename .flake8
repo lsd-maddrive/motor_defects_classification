@@ -10,6 +10,8 @@ ignore=
     D103,
     ; missing docstring in public module
     D104,
+    ; missing docstring in magic method
+    D105,
     ; missing docstring in __init__
     D107,
 

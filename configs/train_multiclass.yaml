@@ -21,6 +21,8 @@ class_labels: [
   "static eccentricity"
 ]
 
+data_version: 2022-07-20
+
 optimizer:
   _target_: torch.optim.Adam
   lr: ${lr}
